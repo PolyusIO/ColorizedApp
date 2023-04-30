@@ -9,11 +9,45 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - IB Outlets
+    @IBOutlet var colorView: UIView!
+    
+    @IBOutlet var redLabel: UILabel!
+    @IBOutlet var greenLabel: UILabel!
+    @IBOutlet var blueLabel: UILabel!
+    
+    @IBOutlet var redSlider: UISlider!
+    @IBOutlet var greenSlider: UISlider!
+    @IBOutlet var blueSlider: UISlider!
+    
+    // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        colorView.layer.cornerRadius = 10
+        setViewColor()
     }
 
-
+    // MARK: - IB Actions
+    @IBAction func sliderActions(_ sender: UISlider) {
+        switch sender {
+        case redSlider:
+            redLabel.text = String(format: "%.2f", redSlider.value)
+        case greenSlider:
+            greenLabel.text = String(format: "%.2f", greenSlider.value)
+        default:
+            blueLabel.text = String(format: "%.2f", blueSlider.value)
+        }
+        setViewColor()
+    }
+    
+    // MARK: - Private Methods
+    private func setViewColor() {
+        colorView.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1
+        )
+    }
 }
 
