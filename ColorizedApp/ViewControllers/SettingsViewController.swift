@@ -20,6 +20,10 @@ class SettingsViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    @IBOutlet var redTextField: UITextField!
+    @IBOutlet var greenTextField: UITextField!
+    @IBOutlet var blueTextField: UITextField!
+    
     // MARK: - Private Properties
     var color: UIColor!
     
@@ -42,6 +46,11 @@ class SettingsViewController: UIViewController {
         }
         setViewColor()
     }
+    
+    @IBAction func doneButtonPressed() {
+        dismiss(animated: true)
+    }
+    
     
     // MARK: - Private Methods
     private func setViewColor() {

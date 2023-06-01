@@ -138,6 +138,9 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="PQU-Ub-yfA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -154,21 +157,24 @@
                     <connections>
                         <outlet property="blueLabel" destination="Ak7-Pe-Tjg" id="6Tc-Gw-zRT"/>
                         <outlet property="blueSlider" destination="FuL-fw-96P" id="2lj-lL-19l"/>
+                        <outlet property="blueTextField" destination="6Z1-cz-dkg" id="sQa-HQ-4fa"/>
                         <outlet property="colorView" destination="a6v-Md-ZRZ" id="oNZ-pP-gLa"/>
                         <outlet property="greenLabel" destination="y10-dT-NGd" id="bvM-Nz-2dg"/>
                         <outlet property="greenSlider" destination="VBh-1V-Dsf" id="jMv-aN-0P0"/>
+                        <outlet property="greenTextField" destination="RlW-ix-fC0" id="gtN-p9-LmY"/>
                         <outlet property="redLabel" destination="0vI-HK-J0r" id="shy-mq-caT"/>
                         <outlet property="redSlider" destination="4p5-kc-4j5" id="tID-Is-9Ou"/>
+                        <outlet property="redTextField" destination="Fro-3C-3bA" id="bwB-vY-T77"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325.95419847328242" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="UY6-rb-reg">
             <objects>
-                <viewController id="pLG-s4-9HN" sceneMemberID="viewController">
+                <viewController id="pLG-s4-9HN" customClass="MainViewController" customModule="ColorizedApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JpE-sH-NyK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
