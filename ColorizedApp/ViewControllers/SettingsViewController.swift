@@ -24,8 +24,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet var greenTextField: UITextField!
     @IBOutlet var blueTextField: UITextField!
     
-    // MARK: - Private Properties
+    // MARK: - Public Properties
     var color: UIColor!
+    var delegate: SettingsViewControllerDelegate!
     
     // MARK: - Override methods
     override func viewDidLoad() {
@@ -48,18 +49,20 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed() {
+        delegate.setBackground(with: color)
         dismiss(animated: true)
     }
     
     
     // MARK: - Private Methods
     private func setViewColor() {
-        colorView.backgroundColor = UIColor(
+        color = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
             alpha: 1
         )
+        colorView.backgroundColor = color
     }
 }
 
