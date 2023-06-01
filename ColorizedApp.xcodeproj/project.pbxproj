@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B8F970529F304FC000DE44C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F970429F304FC000DE44C /* AppDelegate.swift */; };
 		8B8F970729F304FC000DE44C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F970629F304FC000DE44C /* SceneDelegate.swift */; };
-		8B8F970929F304FC000DE44C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F970829F304FC000DE44C /* ViewController.swift */; };
+		8B8F970929F304FC000DE44C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F970829F304FC000DE44C /* SettingsViewController.swift */; };
 		8B8F970C29F304FC000DE44C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8F970A29F304FC000DE44C /* Main.storyboard */; };
 		8B8F970E29F304FE000DE44C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8F970D29F304FE000DE44C /* Assets.xcassets */; };
 		8B8F971129F304FE000DE44C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8F970F29F304FE000DE44C /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		8B8F970129F304FC000DE44C /* ColorizedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorizedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8F970429F304FC000DE44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8F970629F304FC000DE44C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8B8F970829F304FC000DE44C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B8F970829F304FC000DE44C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8B8F970B29F304FC000DE44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B8F970D29F304FE000DE44C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B8F971029F304FE000DE44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,47 @@
 		8B8F970329F304FC000DE44C /* ColorizedApp */ = {
 			isa = PBXGroup;
 			children = (
-				8B8F970429F304FC000DE44C /* AppDelegate.swift */,
-				8B8F970629F304FC000DE44C /* SceneDelegate.swift */,
-				8B8F970829F304FC000DE44C /* ViewController.swift */,
-				8B8F970A29F304FC000DE44C /* Main.storyboard */,
-				8B8F970F29F304FE000DE44C /* LaunchScreen.storyboard */,
-				8B8F970D29F304FE000DE44C /* Assets.xcassets */,
-				8B8F971229F304FE000DE44C /* Info.plist */,
+				8BD5AECE2A2909A700BF3D81 /* ViewControllers */,
+				8BD5AECB2A29096B00BF3D81 /* Storyboards */,
+				8BD5AECC2A29097F00BF3D81 /* Resourses */,
+				8BD5AECD2A29099900BF3D81 /* App */,
 			);
 			path = ColorizedApp;
+			sourceTree = "<group>";
+		};
+		8BD5AECB2A29096B00BF3D81 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8B8F970A29F304FC000DE44C /* Main.storyboard */,
+				8B8F970F29F304FE000DE44C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8BD5AECC2A29097F00BF3D81 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				8B8F970D29F304FE000DE44C /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		8BD5AECD2A29099900BF3D81 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8B8F970429F304FC000DE44C /* AppDelegate.swift */,
+				8B8F970629F304FC000DE44C /* SceneDelegate.swift */,
+				8B8F971229F304FE000DE44C /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8BD5AECE2A2909A700BF3D81 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8B8F970829F304FC000DE44C /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B8F970929F304FC000DE44C /* ViewController.swift in Sources */,
+				8B8F970929F304FC000DE44C /* SettingsViewController.swift in Sources */,
 				8B8F970529F304FC000DE44C /* AppDelegate.swift in Sources */,
 				8B8F970729F304FC000DE44C /* SceneDelegate.swift in Sources */,
 			);
@@ -289,7 +321,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5JLFFB6Q5M;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorizedApp/Info.plist;
+				INFOPLIST_FILE = ColorizedApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,7 +352,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5JLFFB6Q5M;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorizedApp/Info.plist;
+				INFOPLIST_FILE = ColorizedApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

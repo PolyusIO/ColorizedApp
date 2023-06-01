@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SettingsViewController.swift
 //  ColorizedApp
 //
 //  Created by Сергей Поляков on 21.04.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet var colorView: UIView!
