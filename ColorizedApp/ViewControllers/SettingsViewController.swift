@@ -33,36 +33,63 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 10
         colorView.backgroundColor = color
+        redTextField.delegate = self
+        greenTextField.delegate = self
+        blueTextField.delegate = self
     }
 
     // MARK: - IB Actions
     @IBAction func sliderActions(_ sender: UISlider) {
         switch sender {
         case redSlider:
-            redLabel.text = String(format: "%.2f", redSlider.value)
+            redLabel.text = showText(for: redSlider)
+            redTextField.text = showText(for: redSlider)
         case greenSlider:
-            greenLabel.text = String(format: "%.2f", greenSlider.value)
+            greenLabel.text = showText(for: greenSlider)
+            greenTextField.text = showText(for: greenSlider)
         default:
-            blueLabel.text = String(format: "%.2f", blueSlider.value)
+            blueLabel.text = showText(for: blueSlider)
+            blueTextField.text = showText(for: blueSlider)
         }
-        setViewColor()
+        setColor()
+        colorView.backgroundColor = color
     }
     
     @IBAction func doneButtonPressed() {
+        view.endEditing(true)
         delegate.setBackground(with: color)
         dismiss(animated: true)
     }
     
     
     // MARK: - Private Methods
-    private func setViewColor() {
+    private func setColor() {
         color = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
             alpha: 1
         )
-        colorView.backgroundColor = color
     }
+    
+    private func showText(for slider: UISlider) -> String {
+        String(format: "%.2f", slider.value)
+    }
+    
+}
+
+extension SettingsViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let newValue = textField.text else { return }
+        guard let floatValue = Float(newValue) else { return }
+        
+        switch textField {
+        case redTextField: redSlider.value = floatValue
+        case greenTextField: greenSlider.value = floatValue
+        default: blueSlider.value = floatValue
+        }
+    }
+    
 }
 
