@@ -20,11 +20,14 @@ class SettingsViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    // MARK: - Private Properties
+    var color: UIColor!
+    
     // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 10
-        setViewColor()
+        colorView.backgroundColor = color
     }
 
     // MARK: - IB Actions
