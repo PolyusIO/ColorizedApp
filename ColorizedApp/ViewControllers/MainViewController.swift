@@ -11,10 +11,7 @@ protocol SettingsViewControllerDelegate {
     func setBackground(with color: UIColor)
 }
 
-class MainViewController: UIViewController {
-
-    // MARK: - Private Properties
-    private var color = UIColor()
+final class MainViewController: UIViewController {
     
     // MARK: - Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
